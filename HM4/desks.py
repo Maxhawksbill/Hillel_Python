@@ -1,0 +1,6 @@
+first_class = input('Type the quantity of pupils in the 1st class:')
+second_class = input('Type the quantity of pupils in the 2d class:')
+third_class = input('Type the quantity of pupils in the 3d class:')
+#pupil_all = int(first_class) + int(second_class) + int(third_class)
+desk = (int(first_class) // 2 + int(first_class) % 2) + (int(second_class) // 2 + int(second_class) % 2) + (int(third_class) // 2 + int(third_class) % 2)
+print('You should buy:\t' + str(int(desk)) + ' desk(s)')
