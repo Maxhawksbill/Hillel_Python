@@ -1,5 +1,5 @@
 schoolmate_qty = input('Type quantity of schoolmates:')
-apple_qty = input('Type quantuty of apples:')
+apple_qty = input('Type quantity of apples:')
 if int(schoolmate_qty) > int(apple_qty):
     print('Apples will be enough for:\t'+ apple_qty + ' schoolmate(s)')
     #print(apple_qty)
