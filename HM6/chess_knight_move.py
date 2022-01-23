@@ -15,14 +15,12 @@ cell1 = input('Choose any two cells from the ChessBoard above!\n'
               'And the program will check if a Knight can step from cell#1 to the cell#2\n'
               'Enter a first cell:')
 cell2 = input('Enter a second cell:')
-# print(point1[0:1], point1[1:2], point2[0:1], point2[1:2])
 while cell1[0:1] not in chess_letters or cell1[1:2] not in chess_numbers or \
         cell2[0:1] not in chess_letters or cell2[1:2] not in chess_numbers:
     cell1 = input('Cells you have entered DO NOT belong to the ChessBoard!\n'
                   'Try again!\n'
                   'Enter first point:')
     cell2 = input('Enter second point:')
-    # print(point1[0:1], point1[1:2], point2[0:1], point2[1:2], chess_numbers, chess_letters)
     if cell1[0:1] not in chess_letters or cell1[1:2] not in chess_numbers or \
             cell2[0:1] not in chess_letters or cell2[1:2] not in chess_numbers:
         continue
