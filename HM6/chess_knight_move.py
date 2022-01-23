@@ -31,10 +31,10 @@ cell1_number = chess_numbers.index(cell1[1:2])
 cell2_letter = chess_letters.index(cell2[0:1])
 cell2_number = chess_numbers.index(cell2[1:2])
 #print(cell1_letter, type(cell2_letter), cell1_number, cell2_letter, cell2_number)
-if (cell1_letter == (cell2_letter + 2) or cell1_letter == (cell2_letter + 1)) or \
-    (cell1_letter == (cell2_letter - 2) or cell1_letter == (cell2_letter - 1)) and \
-    (cell1_number == (cell2_number + 2) or cell1_number == (cell2_number + 1)) or \
-    (cell1_number == (cell2_number - 2) or cell1_number == (cell2_number - 1)):
+if ((cell1_letter == cell2_letter + 2) and ((cell1_number == cell2_number + 1) or (cell1_number == cell2_number - 1))) or \
+    ((cell1_letter == cell2_letter - 2) and ((cell1_number == cell2_number + 1) or (cell1_number == cell2_number - 1))) or \
+    ((cell1_letter == cell2_number + 1) and ((cell1_number == cell2_number + 2) or (cell1_number == cell2_number - 2))) or \
+    ((cell1_letter == cell2_number - 1) and ((cell1_number == cell2_number + 2) or (cell1_number == cell2_number - 2))):
     print('Knight can be moved to the cell#2')
 else:
     print('Knight can not be moved to the cell#2')
