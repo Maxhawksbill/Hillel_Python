@@ -4,6 +4,7 @@ average = 0
 odds = 0
 evens = 0
 numbers = []
+maximum = minimum = 0
 while True:
     val = int(input('Enter an integer number:'))
     numbers.insert(0, val)
