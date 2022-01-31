@@ -12,4 +12,4 @@ else:
             break
         shift_ind = ind + 1
         t = t + 1
-    print('Your symbol was found ' + str(t) + ' time (s)')
+    print('Your symbol -' + sym_to_find + '- was found ' + str(t) + ' time (s)')
