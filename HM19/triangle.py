@@ -1,5 +1,10 @@
 height = int(input('Enter the height of the triangle:'))
 side = int((3 ** 0.5) * height)
+if height <= 3:
+    side -= 1
+elif height >= 8:
+    side += 1
+
 for i in range(height):
     for j in range(side + 1):
         if j == (side // 2) - i or j == (side // 2) + i or \
