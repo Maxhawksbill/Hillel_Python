@@ -1,6 +1,5 @@
 height = int(input('Enter the height of the rhombus (must be odd number): '))
-a = height // 4
-side = int((3 ** 0.5) * height) + a
+side = int((3 ** 0.5) * height)
 for i in range(height):
     for j in range(side):
         if i <= height // 2 and j == side // 2 - i:
