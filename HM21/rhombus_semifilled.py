@@ -1,4 +1,4 @@
-height = int(input('Enter the height of the triangle: '))
+height = int(input('Enter the height of the rhombus (must be odd number): '))
 a = height // 4
 side = int((3 ** 0.5) * height) + a
 for i in range(height):
