@@ -4,7 +4,7 @@ def rep_word(sentence1, sentence2=''):
     d = {i: (sentence1 + sentence2).count(i) for i in (sentence1 + sentence2)}
     m_value = max(d.values())
     if m_value == 1:
-        return "There is no common words"
+        return "There are no common words"
     else:
         word = [word for word in d.keys() if d[word] == m_value]
     return word[len(word) - 1]
