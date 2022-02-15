@@ -1,17 +1,18 @@
 def arithmetic(number1, number2, action):
-    action = tuple(action)
-    if number2 == 0 and action == ('/', ):
+    value = 0
+    if number2 == 0 and action == '/':
         return "Division by zero"
-    d = {('+',): number1 + number2,
-         ('-',): number1 - number2,
-         ('*',): number1 * number2,
-         ('/',): number1 / number2
-         }
-    if action not in d.keys():
-        return "Unknown operation"
+    if action != '+' and action != '-' and action != '/' and action != '*':
+        return f"Unknown operation {action}"
+    if action == '+':
+        value = number1 + number2
+    elif action == '-':
+        value = number1 - number2
+    elif action == '*':
+        value = number1 * number2
     else:
-        value = d.get(action)
-    return f'The result of the operation: {value}'
+        value = number1 / number2
+    return f'The result of the operation: {round(value, 2)}'
 
 
 x = int(input('Type 1st number: '))
