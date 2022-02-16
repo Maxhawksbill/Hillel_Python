@@ -12,10 +12,10 @@ def arithmetic(number1, number2, action):
         value = number1 * number2
     else:
         value = number1 / number2
-    return f'The result of the operation: {round(value, 2)}'
+    return round(value, 2)
 
 
 x = int(input('Type 1st number: '))
 y = int(input('Type 2d number: '))
 to_do = input('Type the math action (e.g., +, -, /, *): ')
-print(arithmetic(x, y, to_do))
+print(f'The result of the operation: {arithmetic(x, y, to_do)}')
