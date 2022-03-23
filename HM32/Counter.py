@@ -10,19 +10,18 @@ class Counter:
                   'Your counter has been reset to:', self.min_value)
             self.initial_value = self.min_value
         if self.initial_value > self.max_value:
-            print('Your counter is out of range!')
-            exit(0)
+            raise Exception('Your counter is out of range!')
+
         self.initial_value += 1
         if self.initial_value > self.max_value:
-            print('Your counter is out of range!')
-            exit(0)
+            raise Exception('Your counter is out of range!')
         return self.initial_value
 
     def output(self):
         print(self.initial_value)
 
 
-counter1 = Counter(4, 3, 5)
+counter1 = Counter(4, 0, 5)
 counter1.output()
 counter1.increase()
 counter1.output()
