@@ -32,13 +32,9 @@ pp(lst1)
 print(f'Average mark in class: {avrg_total}')
 file1 = open('example_file.txt', 'w', encoding='utf-8')
 for line in lst:
-    if len(str(line[1] + ' ' + line[0][0] + '.')) <= 11:
-        file1.write(str(line[1] + ' ' + line[0][0] + '.'))
-        file1.write('\t\t')
-    else:
-        file1.write(str(line[1] + ' ' + line[0][0] + '.'))
-        file1.write('\t')
-    file1.write(line[len(line) - 1])
+    file1.writelines(str(line[1] + ' ' + line[0][0] + '.').ljust(20))
+    file1.writelines('\t')
+    file1.writelines(line[len(line) - 1].rjust(5))
     file1.write('\n')
 file1.close()
 
