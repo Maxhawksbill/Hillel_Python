@@ -9,6 +9,7 @@ while True:
     else:
         break
 file.close()
+
 summ_total = 0
 avrg_total = 0
 lst1 = []
@@ -27,14 +28,14 @@ for row in lst:
     if avrg < 5:
         lst1.append(" ".join(row))
 avrg_total = round(summ_total / (len(lst)*t), 2)
+
 print("Pupils which have average mark less than 5, are:")
-# for row in lst1:
 print(' and \n'.join(lst1))
 print(f'Average mark in class: {avrg_total}')
 file1 = open('example_file.txt', 'w', encoding='utf-8')
+
 for line in lst:
     file1.writelines(str(line[1] + ' ' + line[0][0] + '.').ljust(20))
-    file1.writelines('\t')
     file1.writelines(line[len(line) - 1].rjust(5))
     file1.write('\n')
 file1.close()
