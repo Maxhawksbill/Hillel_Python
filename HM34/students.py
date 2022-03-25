@@ -25,6 +25,7 @@ class Group(Student):
         self.group_no = group_no
 
     def display_info(self):
+        super().display_info()
         print(f'Student: {self.name} is in {self.group_no} group of the {self.university} University')
 
 
